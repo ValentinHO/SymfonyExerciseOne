@@ -20,15 +20,19 @@ class UsuarioType extends AbstractType
         ->add('nombre',TextType::class,array(
             'label'=>'Nombre',
             'attr'=>array('class'=>'form-control',),))
+
         ->add('apePaterno',TextType::class,array(
             'label'=>'Apellido Paterno',
             'attr'=>array('class'=>'form-control',),))
+
         ->add('apeMaterno',TextType::class,array(
             'label'=>'Apellido Materno',
             'attr'=>array('class'=>'form-control',),))
+
         ->add('edad',TextType::class,array(
             'label'=>'Edad',
             'attr'=>array('class'=>'form-control',),))
+        
         ->add('direccion',EntityType::class,array(
             'class'=>'PruebaCrudBundle:Direccion',
             'attr'=>array('class'=>'form-control',),

@@ -18,12 +18,15 @@ class DireccionType extends AbstractType
         ->add('calle',TextType::class,array(
             'label'=>'Calle',
             'attr'=>array('class'=>'form-control',),))
+
         ->add('colonia',TextType::class,array(
             'label'=>'Colonia',
             'attr'=>array('class'=>'form-control',),))
+
         ->add('delegacion',TextType::class,array(
             'label'=>'Delegación',
             'attr'=>array('class'=>'form-control',),))
+        
         ->add('numero',TextType::class,array(
             'label'=>'Número',
             'attr'=>array('class'=>'form-control',),))        ;
