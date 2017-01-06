@@ -1,0 +1,11 @@
+prueba_crud_direccion:
+    resource: "@PruebaCrudBundle/Resources/config/routing/direccion.yml"
+    prefix:   /direccion
+
+prueba_crud_usuario:
+    resource: "@PruebaCrudBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+
+prueba_crud_homepage:
+    path:     /
+    defaults: { _controller: PruebaCrudBundle:Default:index }

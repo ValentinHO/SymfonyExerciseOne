@@ -1,0 +1,29 @@
+Prueba\CrudBundle\Entity\Direccion:
+    type: entity
+    table: null
+    repositoryClass: Prueba\CrudBundle\Repository\DireccionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '40'
+        colonia:
+            type: string
+            length: '40'
+        delegacion:
+            type: string
+            length: '40'
+        numero:
+            type: string
+            length: '5'
+
+    oneToMany:
+        usuario:
+            targetEntity: Prueba\CrudBundle\Entity\Usuario
+            mappedBy: direccion
+    lifecycleCallbacks: {  }

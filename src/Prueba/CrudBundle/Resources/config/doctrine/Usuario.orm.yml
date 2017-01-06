@@ -1,0 +1,33 @@
+Prueba\CrudBundle\Entity\Usuario:
+    type: entity
+    table: null
+    repositoryClass: Prueba\CrudBundle\Repository\UsuarioRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '40'
+        apePaterno:
+            type: string
+            length: '40'
+            column: ape_paterno
+        apeMaterno:
+            type: string
+            length: '40'
+            column: ape_materno
+        edad:
+            type: integer
+
+    manyToOne:
+        direccion:
+            targetEntity: Prueba\CrudBundle\Entity\Direccion
+            inversedBy: usuario
+            joinColumn:
+                name: id_direccion
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

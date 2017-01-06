@@ -1,0 +1,4 @@
+services:
+#    prueba_crud.example:
+#        class: Prueba\CrudBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

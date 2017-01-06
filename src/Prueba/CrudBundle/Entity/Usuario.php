@@ -1,0 +1,175 @@
+<?php
+
+namespace Prueba\CrudBundle\Entity;
+
+/**
+ * Usuario
+ */
+class Usuario
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     */
+    private $apePaterno;
+
+    /**
+     * @var string
+     */
+    private $apeMaterno;
+
+    /**
+     * @var int
+     */
+    private $edad;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     *
+     * @return Usuario
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set apePaterno
+     *
+     * @param string $apePaterno
+     *
+     * @return Usuario
+     */
+    public function setApePaterno($apePaterno)
+    {
+        $this->apePaterno = $apePaterno;
+
+        return $this;
+    }
+
+    /**
+     * Get apePaterno
+     *
+     * @return string
+     */
+    public function getApePaterno()
+    {
+        return $this->apePaterno;
+    }
+
+    /**
+     * Set apeMaterno
+     *
+     * @param string $apeMaterno
+     *
+     * @return Usuario
+     */
+    public function setApeMaterno($apeMaterno)
+    {
+        $this->apeMaterno = $apeMaterno;
+
+        return $this;
+    }
+
+    /**
+     * Get apeMaterno
+     *
+     * @return string
+     */
+    public function getApeMaterno()
+    {
+        return $this->apeMaterno;
+    }
+
+    /**
+     * Set edad
+     *
+     * @param integer $edad
+     *
+     * @return Usuario
+     */
+    public function setEdad($edad)
+    {
+        $this->edad = $edad;
+
+        return $this;
+    }
+
+    /**
+     * Get edad
+     *
+     * @return int
+     */
+    public function getEdad()
+    {
+        return $this->edad;
+    }
+    /**
+     * @var \Prueba\CrudBundle\Entity\Direccion
+     */
+    private $direccion;
+
+
+    /**
+     * Set direccion
+     *
+     * @param \Prueba\CrudBundle\Entity\Direccion $direccion
+     *
+     * @return Usuario
+     */
+    public function setDireccion(\Prueba\CrudBundle\Entity\Direccion $direccion = null)
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    /**
+     * Get direccion
+     *
+     * @return \Prueba\CrudBundle\Entity\Direccion
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    public function __toString()
+    {
+        return "1";
+    }
+}
