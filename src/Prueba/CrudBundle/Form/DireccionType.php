@@ -5,6 +5,7 @@ namespace Prueba\CrudBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class DireccionType extends AbstractType
 {
@@ -13,7 +14,19 @@ class DireccionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('calle')->add('colonia')->add('delegacion')->add('numero')        ;
+        $builder
+        ->add('calle',TextType::class,array(
+            'label'=>'Calle',
+            'attr'=>array('class'=>'form-control',),))
+        ->add('colonia',TextType::class,array(
+            'label'=>'Colonia',
+            'attr'=>array('class'=>'form-control',),))
+        ->add('delegacion',TextType::class,array(
+            'label'=>'Delegación',
+            'attr'=>array('class'=>'form-control',),))
+        ->add('numero',TextType::class,array(
+            'label'=>'Número',
+            'attr'=>array('class'=>'form-control',),))        ;
     }
     
     /**

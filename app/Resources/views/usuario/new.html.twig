@@ -1,16 +1,20 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
+  <div class="container">
     <h1>Usuario creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="forms">
+        {{ form_start(form, { 'attr': {'class': 'form-horizontal'} }) }}
+            {{ form_widget(form) }}<br>
+            <input type="submit" value="Create" class="btn btn-default"/>
+        {{ form_end(form) }}
+    </div>    
 
     <ul>
         <li>
-            <a href="{{ path('usuario_index') }}">Back to the list</a>
+            <a href="{{ path('usuario_index') }}" class="btn btn-default">Back to the list</a>
         </li>
     </ul>
+ </div>
 {% endblock %}

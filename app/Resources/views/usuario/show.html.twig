@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
+  <div class="container">
     <h1>Usuario</h1>
 
-    <table>
+    <table class="table table-hover table-bordered">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -30,15 +31,16 @@
 
     <ul>
         <li>
-            <a href="{{ path('usuario_index') }}">Back to the list</a>
+            <a href="{{ path('usuario_index') }}" class="btn btn-default">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('usuario_edit', { 'id': usuario.id }) }}">Edit</a>
+            <a href="{{ path('usuario_edit', { 'id': usuario.id }) }}" class="btn btn-default">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete" class="btn btn-default">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+ </div>   
 {% endblock %}

@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
-    <h1>Direccion</h1>
+  <div class="container">
+    <h1>Dirección</h1>
 
-    <table>
+    <table class="table table-hover table-bordered">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -18,11 +19,11 @@
                 <td>{{ direccion.colonia }}</td>
             </tr>
             <tr>
-                <th>Delegacion</th>
+                <th>Delegación</th>
                 <td>{{ direccion.delegacion }}</td>
             </tr>
             <tr>
-                <th>Numero</th>
+                <th>Número</th>
                 <td>{{ direccion.numero }}</td>
             </tr>
         </tbody>
@@ -30,15 +31,16 @@
 
     <ul>
         <li>
-            <a href="{{ path('direccion_index') }}">Back to the list</a>
+            <a href="{{ path('direccion_index') }}" class="btn btn-default">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('direccion_edit', { 'id': direccion.id }) }}">Edit</a>
+            <a href="{{ path('direccion_edit', { 'id': direccion.id }) }}" class="btn btn-default">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete" class="btn btn-default">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+  </div>  
 {% endblock %}

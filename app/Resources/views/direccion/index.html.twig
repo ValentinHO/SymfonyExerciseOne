@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
-    <h1>Direccions list</h1>
+<div class="container">
+    <h1>Lista de Direcciones</h1>
 
-    <table>
+    <table class="table table-hover table-bordered">
         <thead>
             <tr>
                 <th>Id</th>
@@ -25,10 +26,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('direccion_show', { 'id': direccion.id }) }}">show</a>
+                            <a href="{{ path('direccion_show', { 'id': direccion.id }) }}" class="btn btn-default">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('direccion_edit', { 'id': direccion.id }) }}">edit</a>
+                            <a href="{{ path('direccion_edit', { 'id': direccion.id }) }}" class="btn btn-default">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -39,7 +40,8 @@
 
     <ul>
         <li>
-            <a href="{{ path('direccion_new') }}">Create a new direccion</a>
+            <a href="{{ path('direccion_new') }}" class="btn btn-default">Create a new direccion</a>
         </li>
     </ul>
+</div>
 {% endblock %}
